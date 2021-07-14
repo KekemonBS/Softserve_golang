@@ -3,43 +3,49 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io/ioutil"
 	"os"
+	"regexp"
 )
 
 func main() {
 	var word string
 	var newWord string
-
 	path := os.Args[1]
-	if len(os.Args) == 3 {
-		word := os.Args[2]
-	} 
+	if len(os.Args) >= 3 {
+		word = os.Args[2]
+	}
 	if len(os.Args) == 4 {
-		newWord := os.Args[3]	
-	} 
-	fileHandle, err := os.Open(path)
+		newWord = os.Args[3]
+	}
+	file, err := os.OpenFile(path, os.O_RDWR, 0666)
 	if err != nil {
 		panic(err)
 	}
 	scanner := bufio.NewScanner(file)
 	scanner.Split(bufio.ScanWords)
 
-	fmt.Printf("\nPlease select mode [Substitute - s/]: \n")
-	scannerAns := bufio.NewScanner(os.Stdin)
-	
 	counter := 0
-	for scanned := scanner.Scan() {
-		if regexp.MatchString("\\bword\\b", scanned) {
+	matchRegex := "\\b" + word + "\\b"
+	for scanner.Scan() {
+		match, _ := regexp.MatchString(matchRegex, scanner.Text())
+		if match {
 			counter++
 		}
 	}
 
 	if len(os.Args) == 4 {
-			s := re.ReplaceAllString(word, newWord)
-			os.
-			fmt.Printf("All occurances of word %s replaced by %s", word, newWord)		
+		data, _ := ioutil.ReadFile(path)
+		//fmt.Println("All text:", data)
+		re := regexp.MustCompile(word)
+		s := re.ReplaceAllString(string(data), newWord)
+		//fmt.Println("All text after:", s)
+		_ = file.Truncate(0)
+		file.WriteAt([]byte(s), 0)
+		file.Close()
+		fmt.Printf("\nAll occurances of word %s replaced by %s\n", word, newWord)
 	}
-	
-	fmt.Printf("Word %s found %d times", word, counter)
-	
+
+	fmt.Printf("\nWord %s found %d times\n", word, counter)
+
 }
