@@ -44,8 +44,8 @@ func main() {
 		file.WriteAt([]byte(s), 0)
 		file.Close()
 		fmt.Printf("\nAll occurances of word %s replaced by %s\n", word, newWord)
+	} else {
+		fmt.Printf("\nWord %s found %d times\n", word, counter)
 	}
-
-	fmt.Printf("\nWord %s found %d times\n", word, counter)
 
 }
