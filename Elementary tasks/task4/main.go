@@ -11,6 +11,13 @@ import (
 func main() {
 	var word string
 	var newWord string
+	if len(os.Args) == 1 {
+		fmt.Println(`The program must receive arguments for input when starting:
+		<file path> <string for counting>
+		<file path> <search string> <replacement string>`)
+		os.Exit(0)
+	}
+
 	path := os.Args[1]
 	if len(os.Args) >= 3 {
 		word = os.Args[2]
@@ -47,5 +54,4 @@ func main() {
 	} else {
 		fmt.Printf("\nWord %s found %d times\n", word, counter)
 	}
-
 }
