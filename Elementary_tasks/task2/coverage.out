@@ -1,0 +1,23 @@
+mode: set
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:19.13,21.16 2 0
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:21.16,24.3 2 0
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:27.52,31.15 3 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:36.2,40.16 4 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:44.2,45.16 2 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:49.2,53.12 5 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:31.15,35.3 2 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:40.16,42.3 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:45.16,47.3 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:56.64,57.24 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:61.2,72.26 9 0
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:57.24,59.3 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:75.68,78.16 3 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:82.2,83.16 2 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:88.2,88.45 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:78.16,80.3 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:83.16,86.3 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:91.51,92.45 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:95.2,95.105 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:98.2,98.13 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:92.45,94.3 1 1
+github.com/KekemonBS/Softserve_golang/Elementary_tasks/task2/main.go:95.105,97.3 1 1
